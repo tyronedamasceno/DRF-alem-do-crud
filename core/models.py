@@ -8,3 +8,6 @@ class Dog(SafeDeleteModel):
     name = models.CharField(max_length=100)
     birthday = models.DateField()
     owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.name
