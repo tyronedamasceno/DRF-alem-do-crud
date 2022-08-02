@@ -1,15 +1,9 @@
 from rest_framework import serializers
 
-from core.models import Dog, Person
+from core.models import Dog
 
 
 class DogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dog
-        fields = '__all__'
-
-
-class PersonSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
         fields = '__all__'
